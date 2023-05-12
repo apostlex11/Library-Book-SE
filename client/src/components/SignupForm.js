@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
 
 import { CREATE_USER } from '../utils/mutations';
@@ -35,7 +34,7 @@ const SignupForm = () => {
     }
 
     try {
-      const { data } = await addUser({
+      const { data } = await createUser({
         variables: {...userFormData }
       });
 
